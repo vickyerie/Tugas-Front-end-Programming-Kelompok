@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <div class="logo">STEM</div>
+      <h1> — Temperature Conversion</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Kiri -->
+    <section class="left">
+      <div class="card">
+        <label for="value">Masukkan suhu</label>
+        <input type="number" id="value" value="0">
+
+        <div class="selectors">
+          <div>
+            <label for="from">Dari</label>
+            <select id="from">
+              <option value="C">Celsius (°C)</option>
+              <option value="F">Fahrenheit (°F)</option>
+              <option value="K">Kelvin (K)</option>
+              <option value="R">Rankine (°R)</option>
+            </select>
+          </div>
+          <div>
+            <label for="to">Ke</label>
+            <select id="to">
+              <option value="C">Celsius (°C)</option>
+              <option value="F">Fahrenheit (°F)</option>
+              <option value="K">Kelvin (K)</option>
+              <option value="R">Rankine (°R)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="convert">Konversi</button>
+          <button id="swap">Tukar</button>
+          <button id="clear">Bersihkan</button>
+        </div>
+
+        <label>Slide</label>
+        <input type="range" id="slider" min="-100" max="200" value="0">
+
+        <!-- Thermometer dipindah ke sini -->
+        <div class="thermo">
+          <div class="thermometer">
+            <div class="mercury" id="mercury"></div>
+          </div>
+          <p id="bulbVal">0°</p>
+          <p id="scale">Skala: Celsius</p>
+        </div>
+
+        <!-- Hasil -->
+        <div class="result-box">
+          <h3>Hasil</h3>
+          <p id="result">—</p>
+          <button id="copy">Salin</button>
+        </div>
+
+        <div class="accordion-card" id="riwayat">
+          <div class="accordion-header">
+            <span>Riwayat Konversi</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="panel" id="history">
+            <!-- riwayat muncul disini -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Kanan -->
+    <aside class="right">
+      <!-- Apa itu konversi suhu -->
+      <div class="accordion-card" id="konversi">
+        <div class="accordion-header">
+          <span>Apa itu konversi suhu?</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="panel">
+          <p>
+            Konversi suhu adalah proses mengubah satuan temperatur dari skala satu ke skala lain 
+            (misalnya Celsius → Fahrenheit, Kelvin, Rankine). Aplikasi ini menunjukkan rumus dasar, implementasi numerik yang akurat, visualisasi, 
+            dan analisis hasil.
+          </p>
+          <p class="formula">
+            F = C × 9/5 + 32 <br>
+            K = C + 273.15 <br>
+            R = F + 459.67 (Rankine dari F)<br>
+            C = (F − 32) × 5/9
+          </p>
+        </div>
+      </div>
+
+      <!-- STEM -->
+      <div class="accordion-card" id="stem">
+        <div class="accordion-header">
+          <span>STEM</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="panel">
+          <p><b>Science:</b> Konsep suhu dalam sains berkaitan erat dengan energi panas dan perpindahan kalor. Pemahaman tentang suhu sangat penting, misalnya untuk menjelaskan fenomena alam seperti perubahan wujud zat, reaksi kimia, maupun dinamika cuaca dan iklim.</p>
+          <p><b>Technology:</b> Dalam perkembangan teknologi, konversi suhu banyak diterapkan pada perangkat sehari-hari. Contohnya sensor suhu pada smartphone, sistem pendingin seperti AC dan kulkas, serta perangkat IoT yang mampu memantau kondisi lingkungan secara real-time.</p>
+          <p><b>Engineering:</b> Bidang teknik sangat bergantung pada konsep suhu untuk mendukung perhitungan dan perancangan. Insinyur memanfaatkannya dalam desain mesin, sistem pendingin, pembangkit listrik, hingga teknologi penerbangan dan luar angkasa. Skala Rankine juga digunakan secara khusus dalam analisis termodinamika.</p>
+          <p><b>Mathematics:</b> Proses konversi suhu pada dasarnya merupakan penerapan persamaan linear.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quiz -->
+      <div class="accordion-card" id="quiz">
+        <div class="accordion-header">
+          <span>Quiz</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="panel">
+          <!-- isi quiz diisi JS -->
+        </div>
+      </div>
+
+      <!-- Fun Fact -->
+      <div class="accordion-card" id="funfact">
+        <div class="accordion-header">
+          <span>Fun Fact</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="panel">
+          <p id="fact">Klik tombol untuk lihat fakta menarik!</p>
+          <button class="fact-btn" onclick="nextFact()">Next Fact</button>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="accordion-card" id="about">
+        <div class="accordion-header">
+          <span>About</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="panel">
+          <p>
+            Aplikasi Konversi Suhu ini dikembangkan sebagai media pembelajaran interaktif untuk memahami perbedaan skala suhu, yaitu Celsius, Fahrenheit, Kelvin, dan Rankine. 
+            Aplikasi ini tidak hanya berfungsi untuk menghitung konversi secara langsung, tetapi juga memberikan gambaran penerapan suhu dalam bidang sains, teknologi, teknik, dan matematika (STEM). 
+            Melalui fitur tambahan seperti quiz, riwayat, dan fakta menarik, aplikasi ini diharapkan dapat membantu mahasiswa maupun pelajar menghubungkan teori dengan praktik serta melihat relevansinya dalam kehidupan sehari-hari.
+          </p>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© Temperature Conversion - Kelompok 1 TI A</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
