@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  line-height: 1.6;
+  background: #f7f7f7;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #f7f7f7;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+header .logo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+header .logo {
+  background: #ef4444;
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  flex: 1;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+}
+
+input[type="number"], select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.buttons {
+  margin: 0.8rem 0;
+}
+
+button {
+  background: #9ca3af;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #6b7280;
+}
+
+button#swap {
+  background: #9ca3af;
+}
+
+button#swap:hover {
+  background: #6b7280;
+}
+
+button#clear {
+  background: #9ca3af;
+}
+
+button#clear:hover {
+  background: #6b7280;
+}
+
+button#copy {
+  background: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+button#copy:hover {
+  background: #6b7280;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 0.6rem 0;
+}
+
+.result-box {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background: #f1f5f9;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.thermo {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.thermometer {
+  width: 40px;
+  height: 220px;
+  background: #e5e7eb;
+  margin: 0 auto;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mercury {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ef4444;
+  height: 10px;
+  transition: height 0.4s ease;
+}
+
+#bulbVal {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+#scale {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.formula {
+  margin-top: 0.8rem;
+  font-family: monospace;
+  color: #000;
+  background: #f0f9ff;
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+.accordion-card {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: #f1f5f9;
+  padding: 10px 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion-header:hover {
+  background: #e2e8f0;
+}
+
+.accordion-header .arrow {
+  transition: transform 0.3s;
+}
+
+.panel {
+  display: block;
+  background: #fff;
+  padding: 12px;
+  font-size: 0.9rem;
+}
+
+/* Quiz buttons */
+.answer-btn {
+  background: #9ca3af;
+  font-weight: bold;
+  margin: 4px 6px 4px 0;
+}
+.answer-btn:hover {
+  background: #4b5563;
+}
+
+
+/* Tombol Next Fact */
+.fact-btn {
+  background: #9ca3af;
+  color: white;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.fact-btn:hover {
+  background: #6b7280;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #fff;
+  border-top: 2px solid #e0e0e0;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
