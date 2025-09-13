@@ -29,7 +29,9 @@
               <option value="F">Fahrenheit (°F)</option>
               <option value="K">Kelvin (K)</option>
               <option value="R">Rankine (°R)</option>
-            </select>
+              <option value="Re">Réaumur (°Re)</option> 
+              <option value="De">Delisle (°De)</option> 
+          </select>
           </div>
           <div>
             <label for="to">Ke</label>
@@ -38,6 +40,8 @@
               <option value="F">Fahrenheit (°F)</option>
               <option value="K">Kelvin (K)</option>
               <option value="R">Rankine (°R)</option>
+              <option value="Re">Réaumur (°Re)</option> 
+              <option value="De">Delisle (°De)</option> 
             </select>
           </div>
         </div>
@@ -67,12 +71,11 @@
           <button id="copy">Salin</button>
         </div>
 
-        <div class="accordion-card" id="riwayat">
-          <div class="accordion-header">
-            <span>Riwayat Konversi</span>
-            <span class="arrow">▼</span>
+        <div class="history-box">
+          <div class="history-header">
+            <h3>Riwayat Konversi</h3>
           </div>
-          <div class="panel" id="history">
+          <div id="history">
             <!-- riwayat muncul disini -->
           </div>
         </div>
@@ -98,7 +101,9 @@
             F = C × 9/5 + 32 <br>
             K = C + 273.15 <br>
             R = F + 459.67 (Rankine dari F)<br>
-            C = (F − 32) × 5/9
+            C = (F - 32) × 5/9<br>
+            Re = C × 4/5<br>
+            De = (100 - C) × 3/2
           </p>
         </div>
       </div>
